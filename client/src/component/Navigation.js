@@ -1,7 +1,8 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import image from "../assets/app-logo.webp";
+// import image from "../assets/app-logo.webp";
+import image from "../assets/DoctorsShield.png";
 function Navigation() {
   return (
     <Navbar
@@ -11,7 +12,7 @@ function Navigation() {
       sticky="top"
     >
       <Navbar.Brand href="/">
-        <img style={{ width: "60px" }} src={image} alt="app-logo"></img>
+        <img style={{ width: "170px" }} src={image} alt="app-logo"></img>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
