@@ -18,7 +18,7 @@ function Login({ onLogin }) {
     e.preventDefault();
     localStorage.setItem("username", username);
     localStorage.setItem("birthDate", birthDate);
-    localStorage.setItem("address", address);
+    localStorage.setItem("address", JSON.stringify(address));
     console.log("localStorage:", localStorage);
     onLogin({ username, birthDate, address });
   };
@@ -49,7 +49,14 @@ function Login({ onLogin }) {
 
           <Form.Group className="mb-3" controlId="formAddress">
             <Form.Label className="mt-3">Address</Form.Label>
-            <Form.Control type="text" placeholder="Street Address" />
+            <Form.Control
+              type="text"
+              placeholder="Street Address"
+              onChange={(e) => {
+                setAddress({ ...address, street: e.target.value });
+              }}
+            />
+
             <Row>
               <Col>
                 <Form.Label className="mt-3">City</Form.Label>

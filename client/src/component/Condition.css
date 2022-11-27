@@ -57,3 +57,16 @@
   background-color: #cbb700;
   color: black;
 }
+.proposed__treatment {
+  background-color: yellow;
+}
+.proposed__treatment:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+.button__show {
+  display: block;
+}
+.button__hide {
+  display: none;
+}

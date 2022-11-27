@@ -17,6 +17,7 @@ function Home() {
     const username = localStorage.getItem("username");
     const birthDate = localStorage.getItem("birthDate");
     const address = localStorage.getItem("address");
+
     setUser({ username, birthDate, address });
   }, []);
   if (user) {
@@ -52,11 +53,11 @@ function Home() {
                           style={{
                             width: "200px",
                             display: "flex",
-                            justifyContent: "space-around",
+                            justifyContent: "space-between",
                           }}
                         >
                           <b style={{ justifyContent: "flex-start" }}>Name:</b>
-                          <em>Mr. xyz</em>
+                          <b>{user.username}</b>
                         </div>
                       </Card.Text>
                       <Card.Text style={{ margin: "0 auto", padding: "10px" }}>
@@ -64,11 +65,11 @@ function Home() {
                           style={{
                             width: "200px",
                             display: "flex",
-                            justifyContent: "space-around",
+                            justifyContent: "space-between",
                           }}
                         >
                           <b style={{ justifyContent: "flex-start" }}>DOB:</b>
-                          <em>01/01/2001</em>
+                          <b>{user.birthDate}</b>
                         </div>
                       </Card.Text>
                       <Card.Text style={{ margin: "0 auto", padding: "10px" }}>
@@ -76,16 +77,20 @@ function Home() {
                           style={{
                             width: "200px",
                             display: "flex",
-                            justifyContent: "space-around",
+                            justifyContent: "space-between",
                           }}
                         >
-                          <b style={{ justifyContent: "flex-start" }}>
-                            Address:
-                          </b>
                           <div>
-                            <div> Vlkova 5</div>
-                            <div>Praha 5</div>
-                            <div>150 00</div>
+                            <b style={{ justifyContent: "flex-start" }}>
+                              Address:
+                            </b>
+                          </div>
+                          <div>
+                            <div>{user.address.street}</div>
+                            <div>
+                              {user.address.city}, {user.address.country}
+                            </div>
+                            <div>{user.address.zipCode}</div>
                           </div>
                         </div>
                         <div style={{}}></div>
