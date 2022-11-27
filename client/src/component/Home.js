@@ -86,11 +86,11 @@ function Home() {
                             </b>
                           </div>
                           <div>
-                            <div>{user.address.street}</div>
+                            <div>{user?.address?.street}</div>
                             <div>
-                              {user.address.city}, {user.address.country}
+                              {user?.address?.city}, {user?.address?.country}
                             </div>
-                            <div>{user.address.zipCode}</div>
+                            <div>{user?.address?.zipCode}</div>
                           </div>
                         </div>
                         <div style={{}}></div>
