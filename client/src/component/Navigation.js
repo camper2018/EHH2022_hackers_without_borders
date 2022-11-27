@@ -1,7 +1,8 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import image from "../assets/app-logo.webp";
+import { LinkContainer } from "react-router-bootstrap";
+
 import image from "../assets/DoctorsShield.png";
 function Navigation() {
   return (
@@ -11,14 +12,23 @@ function Navigation() {
       expand="lg"
       sticky="top"
     >
-      <Navbar.Brand href="/">
-        <img style={{ width: "170px" }} src={image} alt="app-logo"></img>
-      </Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand>
+          {" "}
+          <img style={{ width: "170px" }} src={image} alt="app-logo"></img>
+        </Navbar.Brand>
+      </LinkContainer>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/diseases">Conditions & Treatments</Nav.Link>
+          <LinkContainer to="/">
+            <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
+
+          <LinkContainer to="/diseases">
+            <Nav.Link>Conditions & Treatments</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

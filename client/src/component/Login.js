@@ -20,7 +20,6 @@ function Login({ onLogin }) {
     localStorage.setItem("username", username);
     localStorage.setItem("birthDate", birthDate);
     localStorage.setItem("address", JSON.stringify(address));
-    console.log("localStorage:", localStorage);
     onLogin({ username, birthDate, address });
   };
   return (

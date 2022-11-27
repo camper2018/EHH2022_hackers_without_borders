@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
 import Collapsible from "react-collapsible";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";

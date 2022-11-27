@@ -9,16 +9,7 @@ function Conditions() {
     // if username  is undefined, render nothing
     const username = localStorage.getItem("username");
     const birthDate = localStorage.getItem("birthDate");
-    // try {
-    //   fetch(`/getDataToPatient?username=${username}&birthdate=${birthDate}`)
-    //     .then((res) => {
-    //       console.log("res+++++", res);
-    //       return res.json();
-    //     })
-    //     .then((data) => console.log("Data:", data));
-    // } catch (e) {
-    //   console.log(e.message);
-    // }
+
     const data = [
       {
         name: "Diabetes Mellitus",
